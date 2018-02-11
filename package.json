@@ -1,0 +1,41 @@
+{
+  "name": "react-webpack-4-hot-loader-boilerplate",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server",
+    "prod": "webpack --mode production",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.39",
+    "@babel/preset-env": "^7.0.0-beta.39",
+    "@babel/preset-react": "^7.0.0-beta.39",
+    "@babel/preset-stage-0": "^7.0.0-beta.39",
+    "babel-loader": "8.0.0-beta.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.9",
+    "express": "^4.16.2",
+    "html-webpack-plugin": "jantimon/html-webpack-plugin#823/head",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.0",
+    "prettier": "1.10.2",
+    "react-hot-loader": "^4.0.0-beta.22",
+    "style-loader": "^0.20.1",
+    "webpack": "^4.0.0-beta.1",
+    "webpack-cli": "^2.0.4",
+    "webpack-dev-middleware": "^2.0.5",
+    "webpack-hot-middleware": "^2.21.0"
+  },
+  "dependencies": {
+    "bootstrap": "4.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "reactstrap": "^5.0.0-beta"
+  }
+}
