@@ -1,9 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 
-import { Button, Container, Row, Col, Navbar, NavbarBrand } from 'reactstrap';
-
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bulma/css/bulma.css';
 
 class App extends React.Component {
   state = {
@@ -13,21 +11,16 @@ class App extends React.Component {
   increment = () => this.setState({ count: this.state.count + 1 });
 
   render() {
-    return [
-      <Navbar light expand="md">
-        <NavbarBrand href="/">React Boilerplate</NavbarBrand>
-      </Navbar>,
-      <Container>
-        <h1>Boilerplate</h1>
-        <Row>
-          <Col>
-            <Button color="primary" onClick={this.increment}>
-              CLICKED {this.state.count} TIMES
-            </Button>
-          </Col>
-        </Row>
-      </Container>,
-    ];
+    return (
+      <section class="section">
+        <div className="container">
+          <h1 className="title">Boilerplate</h1>
+          <button className="button is-primary" onClick={this.increment}>
+            CLICKED {this.state.count} TIMES
+          </button>
+        </div>
+      </section>
+    );
   }
 }
 
