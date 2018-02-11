@@ -8,7 +8,9 @@ const compiler = webpack(
   Object.assign({}, config, {
     entry: ['webpack-hot-middleware/client', './src/index'],
     mode: 'development',
-    plugins: (config.plugins || []).concat([new webpack.HotModuleReplacementPlugin()]),
+    plugins: (config.plugins || []).concat([
+      new webpack.HotModuleReplacementPlugin(),
+    ]),
   }),
 );
 
@@ -18,4 +20,4 @@ const app = express();
 app.use(devMiddleware(compiler));
 app.use(hotMiddleware(compiler));
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.listen(3000, () => console.log('Boilerplate listening on port 3000!'));

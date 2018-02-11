@@ -5,8 +5,12 @@
   "license": "MIT",
   "scripts": {
     "start": "node server",
-    "prod": "webpack --mode production",
-    "precommit": "lint-staged"
+    "prod": "webpack --mode production"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.{js,json,css,md}": ["prettier --write", "git add"]
@@ -22,7 +26,7 @@
     "css-loader": "^0.28.9",
     "express": "^4.16.2",
     "html-webpack-plugin": "jantimon/html-webpack-plugin#823/head",
-    "husky": "^0.14.3",
+    "husky": "^0.15.0-rc.8",
     "lint-staged": "^6.1.0",
     "prettier": "1.10.2",
     "react-hot-loader": "^4.0.0-beta.22",
