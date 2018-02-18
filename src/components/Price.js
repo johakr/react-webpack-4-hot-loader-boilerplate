@@ -2,11 +2,6 @@ import React from 'react';
 import { connect } from 'react-refetch';
 import { hot } from 'react-hot-loader';
 
-const formatter = new Intl.NumberFormat({
-  style: 'currency',
-  currency: 'EUR',
-});
-
 const Price = ({ btcFetch }) => {
   if (!btcFetch.fulfilled) return <div />;
 
@@ -19,16 +14,18 @@ const Price = ({ btcFetch }) => {
         <div className="content">
           <ul>
             <li>
-              {btcFetch.value.EUR.toLocaleString('en-US', {
+              {btcFetch.value.EUR.toLocaleString({
                 style: 'currency',
                 currency: 'EUR',
-              })}
+              })}{' '}
+              €
             </li>
             <li>
-              {btcFetch.value.USD.toLocaleString('en-US', {
+              {btcFetch.value.USD.toLocaleString({
                 style: 'currency',
                 currency: 'USD',
-              })}
+              })}{' '}
+              $
             </li>
           </ul>
         </div>
