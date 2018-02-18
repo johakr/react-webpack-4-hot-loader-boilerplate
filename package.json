@@ -25,7 +25,8 @@
     "clean-webpack-plugin": "^0.1.18",
     "css-loader": "^0.28.9",
     "express": "^4.16.2",
-    "html-webpack-plugin": "jantimon/html-webpack-plugin#823/head",
+    "html-webpack-plugin":
+      "webpack-contrib/html-webpack-plugin#ebfc2771d41a6ab043595d3c621528aee020e2f9",
     "husky": "^0.15.0-rc.8",
     "lint-staged": "^6.1.0",
     "prettier": "1.10.2",
@@ -38,7 +39,8 @@
   },
   "dependencies": {
     "bulma": "^0.6.2",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^16.3.0-alpha.1",
+    "react-dom": "^16.3.0-alpha.1",
+    "react-refetch": "^1.0.4"
   }
 }
