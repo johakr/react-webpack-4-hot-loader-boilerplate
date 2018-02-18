@@ -24,7 +24,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'React / Webpack 4 / Babel 7 / Hot Reloading / Boilerplate',
+      title: 'React Boilerplate',
     }),
   ],
 };
