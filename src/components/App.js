@@ -20,7 +20,6 @@ class App extends React.Component {
             <h1 className="title">React Boilerplate</h1>
             <h2 className="subtitle">
               React 16.3 alpha / Webpack 4 / Babel 7 beta / React Hot Loader 4
-              beta
             </h2>
           </div>
         </div>
